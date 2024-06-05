@@ -1,0 +1,327 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f5f5f5;
+}
+.w {
+	width: 1200px;
+	margin: auto;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear:both;
+}
+.clearfix {
+	*zoom:1;
+}
+/* 上面这一块是清除浮动 */
+a {
+	text-decoration: none;
+}
+/* 确定版心 */
+.header {	
+	height: 42px;
+	/* background-color: pink; */
+	margin: 30px auto;
+}
+/* logo */
+.logo {
+	float: left;
+	height: 42px;
+	width: 198px;
+}
+/* 设置导航栏按钮 */
+li {
+	list-style: none;
+}
+
+.nav {
+	float: left;
+	margin-left: 60px;
+}
+
+.nav ul li {
+	float: left;
+	padding: 0px 15px;
+}
+.nav ul li a {
+	display:block;
+	/* a标签是行内标签,要转换成行内块元素才能设置高和宽 */
+	height: 42px;
+	padding: 0px 10px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #050505;
+	
+}
+.nav ul li a:hover {
+	border-bottom: 2px solid #00a4ff;
+	color: #00a4ff;
+	font-weight: 600;
+}
+/* 搜索模块 */
+.search {
+	float: left;
+	margin-left: 50px;
+	width: 412px;
+	height: 42px;
+	background-color: #55aaff;
+	border-radius: 0px 15px 15px 0px;
+}
+.search input {
+	float: left;
+	width: 345px;
+	height: 42px;
+	border: 1px solid #00a4ff;
+	border-right: 0;
+	color: #bfbfbf;
+	font-size: 14px;
+	padding-left: 15px;
+}
+/* input和button都属于行内块元素,行内块元素之间都会默认有空隙,可以让他们浮动,浮动了就没有空隙了 */
+.search button {
+	float: left;
+	width: 50px;
+	height: 43px;
+	background-color:#55aaff;
+	border: 0;
+	background: url('../img/搜索.png') no-repeat center center;
+	background-size: 30px 30px;
+	/* button默认有边框,需要把他去掉 */
+	color: #282c35;
+	border-radius-top-right:10px ;
+	border-radius: 0px 15px 15px 0px;
+}
+.user {
+	float: left;
+	margin-left: 50px;
+	width: 100px;
+	height: 42px;
+	/* background-color: #00a4ff; */
+	font-style: normal;
+}
+.user a {
+	float: left;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 12px;
+	color: #282c35;
+	font-weight: 500;
+}
+.user a:hover {
+	color: black;
+	font-weight: 600;
+}
+/* 网页banner部分 */
+.banner {
+	height: 421px;
+	background-color:#1B0C6F;
+	
+}
+.banner .w {
+	height: 421px;
+	background:url('../img/banner.png') no-repeat top center;
+	
+}
+.subnav {
+	float: left;
+	width: 190px;
+	height: 421px;
+	background: rgba(0, 0, 0, 0.3);
+}
+.subnav ul li {
+	height: 45px;
+	line-height: 45px;
+	padding: 0px 20px;
+}
+.subnav ul li a {
+	font-size: 14px;
+	color:#fff;
+}
+.subnav ul li a:hover {
+	color: #55aaff;
+}
+.subnav ul li a span {
+	float: right;
+}
+.couse {
+	float: right;
+	/* 浮动的盒子不会有外边距合并的问题 */
+	margin-top: 50px;
+	width: 230px;
+	height: 300px;
+	background-color: white;
+}
+.couse .title {
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #55AAFF;
+}
+.couse .bd ul li h4 {
+	font-size: 16px;
+	color: #4e4e4e;
+}
+.couse .bd ul li p {
+	font-size: 12px;
+	color: #5a5a5a;
+}
+.bd {
+	padding: 10px 20px;
+}
+.bd ul li {
+	padding: 13px 0px;
+	border-bottom: 1px solid #5a5a5a;
+}
+.bd .more {
+	display: block;
+	/* 行内元素使用宽高要改成块元素或者行内块元素 */
+	height: 38px;
+	margin-top: 5px;
+	border: 2px solid #55AAFF;
+	font-size: 16px;
+	color: #55AAFF;
+	text-align: center;
+	line-height: 38px;
+}
+/* 精品推荐模块 */
+.goods {
+	margin-top: 10px;
+	height: 60px;
+	background-color: white;
+	box-shadow: 0 3px 3px 3px rgba(0,0, 0, 0.1);
+}
+.goods h3 {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	padding:0px 30px;
+	color: #55AAFF;
+}
+.goods ul li {
+	float: left;
+}
+.goods ul li a{
+	padding: 0px 30px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 16px;
+	color: #050505;
+	border-left: 1px solid #b6b6b6;
+}
+.goods ul li a:hover {
+	color: #00a4ff;
+}
+.goods .repair {
+	float: right;
+	height: 60px;
+	line-height: 60px;
+	padding:0px 30px;
+	color: #55AAFF;
+}
+.box {
+	margin-top: 30px;
+}
+.box .box-hd {
+	height: 45px;
+}
+.box .box-hd h3 {
+	float: left;
+	color: #5a5a5a;
+}
+.box .box-hd a {
+	float: right;
+	font-size: 12px;
+	color: #4e4e4e;
+	margin-right: 30px;
+	margin-top: 5px;
+}
+.box .box-bd ul {
+	width: 1225px;
+	height: ;
+}
+.box .box-bd ul li {
+	position: relative;
+	float: left;
+	height: 270px;
+	width: 228px;
+	background-color: white;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.box .box-bd ul li > img {
+	width: 100%;
+}
+.box .box-bd ul li em {
+	position: absolute;
+	top: 5px;
+	right: 0px;
+}
+.box .box-bd ul li h4 {
+	margin: 20px 20px 20px 25px;
+	font-size: 14px;
+	color: #050505;
+	font-weight: 500;
+}
+.box .box-bd .info {
+	margin: 0px 20px 0px 25px;
+	font-size: 12px;
+	color: #999;
+}
+.box .box-bd .info span {
+	color: #ff7c2d;
+}
+/* 底部导航栏模块 */
+.footer {
+	height: 415px;
+	border: #fff;
+}
+.footer .w {
+	padding-top:35px;
+}
+.footer .w .copyright {
+	float: left;
+}
+.footer p {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	font-size: 12px;
+	color: #666;
+}
+.footer .copyright .app {
+	display: block;
+	width: 118px;
+	height: 33px;
+	border: 2px solid #00a4ff;
+	line-height: 33px;
+	font-size: 16px;
+	text-align: center;
+	color: #5aaffa;
+}
+.footer .w .links {
+	float: right;
+}
+.footer .w dl {
+	float: left;
+	margin-left: 100px;
+}
+.footer .w .links dl dt {
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 5px;
+}
+.footer .w .links dl dd a {
+	color: #333;
+	font-size: 12px;
+}
+/* css遵循一下顺序:
+1.布局定位属性
+2.自身属性
+3.文本属性
+4.其他属性 */
