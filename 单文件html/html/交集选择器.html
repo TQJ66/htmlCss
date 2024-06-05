@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        p {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        p.blue {
+            color: green;
+        }
+    </style>
+    <!-- 交集选择器:由标签选择器和类选择器或者id选择器组成
+        看第三个p.blue给的绿色,而第二行运行就是绿色,
+    他的意思就是既要是p段落,也要是blue,就满足交集(同时符合)的条件,就会输出绿色 -->
+
+</head>
+
+<body>
+    <p>我是红色的</p>
+    <p class="blue">我是绿色</p>
+    <h4 class="blue">我是蓝色</h4>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息登记</title>
+</head>
+
+<body>
+    <table border="2" align="center" width="300" cellspacing="2">
+        <caption>信息登记</caption>
+        <form action="#" method="get">
+            <tr>
+                <td width="50">班级：</td>
+                <td><input type="text" name="youname"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="sex" value="男" id="man">
+                    <label for="man">男</label>
+                    <input type="radio" name="sex" value="女" id="woman">
+                    <label for="woman">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" maxlength="11" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td>院系：</td>
+                <td>
+                    <select size="1">
+                        <option>人工智能学院</option>
+                        <option>现代邮政学院</option>
+                        <option>信息通信学院</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td>
+                    <input type="checkbox" name="特长" value="html" id="HTML">
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" name="特长" value="js" id="JS">
+                    <label for="JS">JS</label>
+                    <input type="checkbox" name="特长" value="css" id="CSS">
+                    <label for="CSS">CSS</label>
+                </td>
+            </tr>
+            <tr height="100">
+                <td>简介：</td>
+                <td>
+                    <textarea cols="32" rows="6" name="jianjie"></textarea>
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </form>
+
+    </table>
+</body>
+
+</html>

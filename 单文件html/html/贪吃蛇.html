@@ -1,0 +1,77 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>贪吃蛇小游戏</title>  
+    <style>  
+        body {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            margin: 0;  
+            background-color: #f4f4f4;  
+        }  
+        #gameCanvas {  
+            border: 1px solid #000;  
+            background-color: #fff;  
+        }  
+    </style>
+</head>  
+<body>  
+    <canvas id="gameCanvas" width="400" height="400"></canvas>  
+    <script>  
+        const canvas = document.getElementById('gameCanvas');  
+        const ctx = canvas.getContext('2d');  
+          
+        let snake = [{ x: 10, y: 10 }];  
+        let direction = { x: 10, y: 0 };  
+        let food = { x: Math.floor(Math.random() * 30) * 10, y: Math.floor(Math.random() * 30) * 10 };  
+      
+        document.addEventListener('keydown', function(event) {  
+            // 方向键控制  
+            switch(event.keyCode) {  
+                case 37: direction = { x: -10, y: 0 }; break; // 左  
+                case 38: direction = { x: 0, y: -10 }; break; // 上  
+                case 39: direction = { x: 10, y: 0 }; break; // 右  
+                case 40: direction = { x: 0, y: 10 }; break; // 下  
+            }  
+        });  
+      
+        function draw() {  
+            // 清除画布  
+            ctx.clearRect(0, 0, canvas.width, canvas.height);  
+      
+            // 绘制食物  
+            ctx.fillStyle = 'red';  
+            ctx.fillRect(food.x, food.y, 10, 10);  
+      
+            // 绘制蛇身  
+            ctx.fillStyle = 'green';  
+            for (let i = 0; i < snake.length; i++) {  
+                ctx.fillRect(snake[i].x, snake[i].y, 10, 10);  
+            }  
+      
+            // 移动蛇头  
+            const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };  
+            snake.unshift(head);  
+      
+            // 检查蛇是否吃到食物  
+            if (head.x === food.x && head.y === food.y) {  
+                food = { x: Math.floor(Math.random() * 30) * 10, y: Math.floor(Math.random() * 30) * 10 };  
+            } else {  
+                // 移除蛇尾  
+                snake.pop();  
+            }  
+      
+            // 检查蛇是否碰到边界或自身  
+            if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height ||   
+                snake.slice(1).some(part => part.x === head.x && part.y === head.y)) {  
+                // 游戏结束逻辑（这里只是重置游戏）  
+                snake = [{ x: 10, y: 10 }];  
+                direction = { x: 10, y: 0 };  
+                food = { x: Math.floor(Math.random() * 30) * 10, y: Math.floor(Math.random() * 30) * 10 };  
+            }
+</body>  
+</html>

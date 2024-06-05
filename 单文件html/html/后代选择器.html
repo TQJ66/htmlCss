@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        p strong {
+            color: red;
+        }
+
+        strong {
+            color: blue;
+        }
+    </style>
+    <!-- 后代选择器:看第一个p strong对应下面的第一行,下面第一行p标签在外面,
+    strong被嵌套在里头,然后上面第一个也是p在strong前面,但是要注意,
+    外层标签和内层之间要用空格分开. -->
+</head>
+
+<body>
+    <p>哈哈,<strong>哈哈</strong></p>
+    <!-- 看这行,p标签在外面,strong被嵌套在里头 -->
+    <strong>哈哈,哈哈</strong>
+    <!-- 这一行没被p套在外面就不会变成红色 -->
+</body>
+
+</html>

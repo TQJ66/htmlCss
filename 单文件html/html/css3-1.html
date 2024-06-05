@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3入门</title>
+    <link href="../css/0-1.css" type="text/css" rel="stylesheet" />
+    <!-- 这个是链入式,用来链接css里样式的 -->
+    <style type="text/css">
+        h2 {
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 60px;
+            color: green;
+        }
+    </style>
+    <!-- 上面这个就叫内嵌式,只对当前html文件生效 -->
+    <!-- <style type="text/css">
+        @import url(../css/0-1.css);
+        @import "../css/0-1.css";
+    </style> -->
+    <!-- 这个是导入式,有两种写法都可以,但是更推荐链入式 -->
+    h6{
+    text-align: center;
+    }
+    <!-- 直接设置在html里面是没有效果的,要放到css文件然后用链入式才能生效 -->
+</head>
+
+<body>
+    <p style="font-size: 100px; color: aqua;">你好</p>
+    <!-- 这个是行内式,只针对单行有用 -->
+    <p>你好</p>
+    <!-- 这个没被加任何效果,用于对比 -->
+    <h1>哈哈哈哈</h1>
+    <!-- 这个h1标签被链入式了,在css样式里他被设置了 -->
+    <h2>我被内嵌式设置了居中</h2>
+    <h4>我被内嵌式设置了大小和颜色</h4>
+    <h6>我试试</h6>
+</body>
+
+</html>
